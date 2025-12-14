@@ -31,10 +31,10 @@ spring:
   kafka:
     bootstrap-servers: kafka:9092
 
-  security:
-    user:
-      name: admin
-      password: ${vault.user-service.admin-password}
+#  security:
+#    user:
+#      name: admin
+#      password: ${vault.user-service.admin-password}
 
 eureka:
   instance:
