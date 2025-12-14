@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/user_db
-    username: ${user-service.db.username}
-    password: ${user-service.db.password}
+    username: ${db.username}
+    password: ${db.password}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -25,16 +25,16 @@ spring:
     redis:
       host: redis
       port: 6379
-      password: ${user-service.redis.password}
+      password: ${redis.password}
       time-to-live: 600000
 
   kafka:
-    bootstrap-servers: ${application.kafka.bootstrap}
+    bootstrap-servers: ${kafka.bootstrap}
 
 #  security:
 #    user:
 #      name: admin
-#      password: ${vault.user-service.admin-password}
+#      password: ${admin-password}
 
 eureka:
   instance:
