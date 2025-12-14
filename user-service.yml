@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:postgresql://postgres:5432/user_db
-    username: ${vault.user-service.db-username}
-    password: ${vault.user-service.db-password}
+    username: ${vault.user-service.db.username}
+    password: ${vault.user-service.db.password}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -25,11 +25,11 @@ spring:
     redis:
       host: redis
       port: 6379
-      password: ${vault.user-service.redis-password}
+      password: ${vault.user-service.redis.password}
       time-to-live: 600000
 
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: ${vault.application.kafka.bootstrap}
 
 #  security:
 #    user:
