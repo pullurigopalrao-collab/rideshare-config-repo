@@ -1,3 +1,13 @@
-# user-service.yml
 server:
   port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb
+    username: user
+    password: ${vault.user-service.db-password}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
